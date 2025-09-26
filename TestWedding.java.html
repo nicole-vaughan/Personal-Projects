@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>TestWedding.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TestWedding.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">time</span><span class="s2">.</span><span class="s1">LocalDate</span><span class="s2">;</span>
+
+<span class="s0">class </span><span class="s1">Person</span><span class="s2">{</span>
+    <span class="s1">String fName</span><span class="s2">;</span>
+    <span class="s1">String lName</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Person</span><span class="s2">() {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">fName </span><span class="s2">= </span><span class="s3">&quot;&quot;</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">lName </span><span class="s2">= </span><span class="s3">&quot;&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Person</span><span class="s2">(</span><span class="s1">String fName</span><span class="s2">, </span><span class="s1">String lName</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">fName </span><span class="s2">= </span><span class="s1">fName</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">lName </span><span class="s2">= </span><span class="s1">lName</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getFirstName</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">fName</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getLastName</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">lName</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">){</span>
+
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s0">class </span><span class="s1">Couple</span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">Person bride</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">Person groom</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Couple</span><span class="s2">() {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">bride </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">();</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">groom </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">();</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Couple</span><span class="s2">(</span><span class="s1">Person bride</span><span class="s2">, </span><span class="s1">Person groom</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">bride </span><span class="s2">= </span><span class="s1">bride</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">groom </span><span class="s2">= </span><span class="s1">groom</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Person getBride</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">bride</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Person getGroom</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">groom</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s0">class </span><span class="s1">Wedding</span><span class="s2">{</span>
+
+    <span class="s0">private </span><span class="s1">Couple couple</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">LocalDate weddingDate</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String location</span><span class="s2">;</span>
+    <span class="s0">public </span><span class="s1">Wedding</span><span class="s2">() {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">couple </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Couple</span><span class="s2">();</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">weddingDate </span><span class="s2">= </span><span class="s1">LocalDate</span><span class="s2">.</span><span class="s1">now</span><span class="s2">();  </span><span class="s4">// Default to current date</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">location </span><span class="s2">= </span><span class="s3">&quot;&quot;</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Wedding</span><span class="s2">(</span><span class="s1">Couple couple</span><span class="s2">, </span><span class="s1">LocalDate weddingDate</span><span class="s2">, </span><span class="s1">String location</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">couple </span><span class="s2">= </span><span class="s1">couple</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">weddingDate </span><span class="s2">= </span><span class="s1">weddingDate</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">location </span><span class="s2">= </span><span class="s1">location</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Couple getCouple</span><span class="s2">(){</span>
+        <span class="s0">return </span><span class="s1">couple</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">LocalDate getWeddingDate</span><span class="s2">(){</span>
+        <span class="s0">return </span><span class="s1">weddingDate</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getLocation</span><span class="s2">(){</span>
+        <span class="s0">return </span><span class="s1">location</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s0">public class </span><span class="s1">TestWedding</span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">){</span>
+        <span class="s1">Scanner input </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter month of wedding&quot;</span><span class="s2">); </span><span class="s0">int </span><span class="s1">month </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter day of wedding&quot;</span><span class="s2">); </span><span class="s0">int </span><span class="s1">day </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter year of wedding&quot;</span><span class="s2">); </span><span class="s0">int </span><span class="s1">year </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter first name of bride &gt;&gt;&quot;</span><span class="s2">); </span><span class="s1">String fNameBride </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter last name of bride &gt;&gt;&quot;</span><span class="s2">); </span><span class="s1">String lNameBride </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter first name of groom &gt;&gt;&quot;</span><span class="s2">); </span><span class="s1">String fNameGroom </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter last name of groom &gt;&gt;&quot;</span><span class="s2">); </span><span class="s1">String lNameGroom </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Enter location of wedding &gt;&gt; &quot;</span><span class="s2">); </span><span class="s1">String location </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">();</span>
+        <span class="s1">LocalDate weddingDate </span><span class="s2">= </span><span class="s1">LocalDate</span><span class="s2">.</span><span class="s1">of</span><span class="s2">(</span><span class="s1">year</span><span class="s2">, </span><span class="s1">month</span><span class="s2">, </span><span class="s1">day</span><span class="s2">);</span>
+        <span class="s1">Person bride </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">(</span><span class="s1">fNameBride</span><span class="s2">, </span><span class="s1">lNameBride</span><span class="s2">);</span>
+        <span class="s1">Person groom </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Person</span><span class="s2">(</span><span class="s1">fNameGroom</span><span class="s2">, </span><span class="s1">lNameGroom</span><span class="s2">);</span>
+        <span class="s1">Couple couple </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Couple </span><span class="s2">(</span><span class="s1">bride</span><span class="s2">, </span><span class="s1">groom</span><span class="s2">);</span>
+        <span class="s1">Wedding wedding </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Wedding</span><span class="s2">(</span><span class="s1">couple</span><span class="s2">, </span><span class="s1">weddingDate</span><span class="s2">, </span><span class="s1">location</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span>
+                <span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getBride</span><span class="s2">().</span><span class="s1">getLastName</span><span class="s2">() + </span><span class="s3">&quot;/&quot; </span><span class="s2">+</span>
+                        <span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getGroom</span><span class="s2">().</span><span class="s1">getLastName</span><span class="s2">() + </span><span class="s3">&quot; Wedding&quot;</span><span class="s2">);</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Date: &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getWeddingDate</span><span class="s2">() + </span><span class="s3">&quot;   Location: &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getLocation</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Bride: &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getBride</span><span class="s2">().</span><span class="s1">getFirstName</span><span class="s2">() + </span><span class="s3">&quot; &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getBride</span><span class="s2">().</span><span class="s1">getLastName</span><span class="s2">());</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Groom: &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getGroom</span><span class="s2">().</span><span class="s1">getFirstName</span><span class="s2">() + </span><span class="s3">&quot; &quot; </span><span class="s2">+ </span><span class="s1">wedding</span><span class="s2">.</span><span class="s1">getCouple</span><span class="s2">().</span><span class="s1">getGroom</span><span class="s2">().</span><span class="s1">getLastName</span><span class="s2">());</span>
+
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
